@@ -85,6 +85,9 @@
 
 
     var player = new Player();
+    var skillFlail = new Skill("Flail", {"str": 0.8, "dex": 0.8}, "atk", 1);
+    player.skills.push(skillFlail);
+    console.log(JSON.stringify(player));
 
 
 </script>
