@@ -17,6 +17,10 @@
     width: 0%;
     background-color: cyan;
 }
+#stamBar {
+    width: 0%;
+    background-color: rgb(204, 204, 70);
+}
 
 #playerInfo {
     display: flex;
@@ -30,11 +34,11 @@
 #str{
     color: darkred;
 }
-#dex{
+#agi{
     color: forestgreen;
 }
-#int{
-    color: mediumblue;
+#end{
+    color: rgb(223, 109, 15);
 }
 
 body{
