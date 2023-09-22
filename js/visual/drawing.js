@@ -19,6 +19,10 @@ export class Drawer {
 
     static updateQi(player){
         var qiBar = document.getElementById("qiBar");
+        if(player.maxQi === 0){
+            document.getElementById("qiProgress").style.display = "none"
+            return
+        }
         var precentageOfQi = player.currQi/player.maxQi * 100;
         qiBar.style.width = precentageOfQi.toString()+"%";
         qiBar.innerHTML = player.currQi.toString()+"/"+player.maxQi.toString();
