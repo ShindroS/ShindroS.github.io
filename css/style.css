@@ -13,6 +13,11 @@
     width: 0%;
     background-color: green;
 }
+#qiBar {
+    width: 0%;
+    background-color: cyan;
+}
+
 #playerInfo {
     display: flex;
     flex-direction: column;
