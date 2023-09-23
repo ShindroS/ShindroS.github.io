@@ -1,7 +1,7 @@
 export class Action{
-    constructor(name, duration, type){
+    constructor(name, type, effect){
         this.name = name;
-        this.duration = duration;
         this.type = type;
+        this.effect = effect;
     }
 }

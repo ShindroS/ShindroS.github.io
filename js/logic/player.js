@@ -1,5 +1,4 @@
 import {Character as Character} from "./character.js"
-import {Skill as Skill} from "./skills/skill.js"
 
 export class Player extends Character{
     constructor(name){
@@ -11,19 +10,18 @@ export class Player extends Character{
         this.baseStamRegen = 1;
         this.tempStamRegen = 0;
         this.stamRegenMulti = 1;
-        this.stamRegen = (this.baseStamRegen + this.tempStamRegen) * this.stamRegenMulti;
+        this.stamRegen = parseFloat(((this.baseStamRegen + this.tempStamRegen) * this.stamRegenMulti * 0.1).toFixed(2));
 
         this.end = 0.5;
 
         this.statusEfects = {};
-        this.skills = new Array();
+        
     }
 
     updateBars(){
-
-        this.currHealth = this.currHealth + this.healthRegen;
-        this.currStam = this.currStam + this.stamRegen;
-        this.currQi = this.currQi + this.qiRegen;
+        this.currHealth = parseFloat((this.currHealth + this.healthRegen).toFixed(2));
+        this.currStam = parseFloat((this.currStam + this.stamRegen).toFixed(2));
+        this.currQi = parseFloat((this.currQi + this.qiRegen).toFixed(2));
         if(this.currHealth > this.maxHealth){
             this.currHealth = this.maxHealth;
         }
